@@ -1,0 +1,105 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Suchender</help_text><element><id>UMLClass</id><coordinates><x>856</x><y>136</y><w>152</w><h>136</h></coordinates><panel_attributes>User
+--
+- vorname: String
+- nachname: String
+- id: int
+- e-mail: String
+- passwort: String
+- telefonnummer: String
+- adresse: Adresse
+- alter: int
+- verifizierungsstatus: boolean
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>184</y><w>128</w><h>112</h></coordinates><panel_attributes>Inserat
+--
+- id: int
+- wohnform: String
+- ersteller: User
+- beschreibung: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>232</x><y>328</y><w>128</w><h>128</h></coordinates><panel_attributes>Wohnung
+--
+adresse: Adresse
+wohnform: String
+preis: double
+groesse: double
+anzZimmer: double
+barrierefreiheit: boolean
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>328</y><w>152</w><h>128</h></coordinates><panel_attributes>Gemeinschaft
+-
+anzMitglieder: int
+typ: String
+adresse: Adresse
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>8</x><y>184</y><w>184</w><h>256</h></coordinates><panel_attributes>Filter
+--
+- minPreis: int
+- maxPreis: int
+- minGroesse: int
+- maxGroesse: int
+- minAnzZimmer: int
+- maxAnzZimmer: int
+- wohnform: String[4]
+- radius: double
+- adresse: Adresse
+- barrierefreiheit: boolean
+-
+- equals(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>560</y><w>120</w><h>144</h></coordinates><panel_attributes>Adresse
+--
+- straße: String
+- hausnummer: String
+- postleitzahl: int
+- stadt: String
+- land: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>784</x><y>312</y><w>128</w><h>144</h></coordinates><panel_attributes>NormalNutzer
+-
+favoriten: Inserat[]
+
+-
++ inseratErstellen()
++ inseratSuchen()
++ favorisieren();
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>232</y><w>104</w><h>112</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;100;10;100;120</additional_attributes></element><element><id>Relation</id><coordinates><x>248</x><y>232</y><w>80</w><h>112</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>80;10;10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>192</y><w>368</w><h>136</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+&lt;Erstellt</panel_attributes><additional_attributes>440;150;350;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>216</y><w>368</w><h>208</h></coordinates><panel_attributes>lt=-
+m1=M
+m2=0..n
+&lt;Favoriten</panel_attributes><additional_attributes>440;230;240;230;240;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>56</y><w>416</w><h>152</h></coordinates><panel_attributes>lt=-
+m1=N
+m2=1
+&lt;Zeigt</panel_attributes><additional_attributes>490;160;490;20;10;20;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>264</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>992</x><y>264</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>448</y><w>32</w><h>128</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>448</y><w>32</w><h>128</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>976</x><y>312</y><w>160</w><h>144</h></coordinates><panel_attributes>Admin
+-
+-adminPasswort: String
+
+-
+- loescheUser();
+- loescheInserat();
+- sperreUser();
+- systemLogsAnzeigen(): String[]
+- bearbeiteBewertung();
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>856</x><y>544</y><w>176</w><h>152</h></coordinates><panel_attributes>Bewertung
+-
+- bewertungsId: int
+- sterne: float
+
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>264</y><w>56</w><h>296</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+&lt;Erstellt</panel_attributes><additional_attributes>10;10;10;350</additional_attributes></element></diagram>

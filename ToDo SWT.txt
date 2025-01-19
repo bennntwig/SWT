@@ -1,0 +1,28 @@
+Klassendiagramm
+- allgemeine Überarbeitung
+    -> insbesondere Assiatiationen etc.
+
+Sequenzdiagramm
+- erstes evtl erweitern
+- noch eins erstellen
+    ->sync und async Kommunikation
+    ->ausreichend komplexer Anwendungsfall aus UseCase (evtl erweitern)
+
+Aktivitätsdiagramm
+- erweitern
+    -> 10 Aktionsknoten
+    -> 5 Kontrollknoten
+    -> Unterbrechungsbereich, Exception Handler
+    -> 1 "Parallelausführung"
+
+Zustandsdiagramm
+- erweitern 
+    -> mind 10 Zustände (aktuell 9)
+    -> mind 1 (entry-/exit-/do)- Aktivität
+    -> mind 3 Ereignisse
+    -> mind 1 "zsm gesetzten Zustand"
+
+Konsistenzprüfung (mit Klassendiagramm)
+- https://fh.do/scaffolds/#/anwendung/SWT1
+- Modellkonsistenzdiagramm
+
