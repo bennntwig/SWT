@@ -1,6 +1,3 @@
-Klassendiagramm
-- allgemeine Überarbeitung
-    -> insbesondere Assiatiationen etc.
 
 Sequenzdiagramm
 - erstes evtl erweitern
@@ -18,7 +15,7 @@ Aktivitätsdiagramm
 Zustandsdiagramm
 - erweitern 
     -> mind 10 Zustände (aktuell 9)
-    -> mind 1 (entry-/exit-/do)- Aktivität
+    -> mind 1 (entry-/exit-/do)-Aktivität
     -> mind 3 Ereignisse
     -> mind 1 "zsm gesetzten Zustand"
 
