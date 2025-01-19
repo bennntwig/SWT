@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Suchender</help_text><element><id>UMLClass</id><coordinates><x>856</x><y>136</y><w>152</w><h>136</h></coordinates><panel_attributes>User
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Suchender</help_text><element><id>UMLClass</id><coordinates><x>1060</x><y>360</y><w>350</w><h>300</h></coordinates><panel_attributes>User
 --
 - vorname: String
 - nachname: String
@@ -9,29 +9,41 @@
 - adresse: Adresse
 - alter: int
 - verifizierungsstatus: boolean
-
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>184</y><w>128</w><h>112</h></coordinates><panel_attributes>Inserat
++ einloggen(passwort: String, eMail: String): boolean
++ bewerten(inserat: Inserat)
++ changeEmail(newEmail: String): boolean
++ changeTelNr (newTelNr: int): boolean
++ changeAdresse (newAdr: String): boolean
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>550</y><w>160</w><h>120</h></coordinates><panel_attributes>Inserat
 --
 - id: int
 - wohnform: String
 - ersteller: User
 - beschreibung: String
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>232</x><y>328</y><w>128</w><h>128</h></coordinates><panel_attributes>Wohnung
 --
-adresse: Adresse
-wohnform: String
-preis: double
-groesse: double
-anzZimmer: double
-barrierefreiheit: boolean
++ bearbeiten(): boolean
++ loeschen(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>730</y><w>160</w><h>160</h></coordinates><panel_attributes>Wohnung
+--
+- adresse: Adresse
+- wohnform: String
+- preis: double
+- quadratmeter: double
+- anzZimmer: double
+- barrierefreiheit: boolean
 -
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>328</y><w>152</w><h>128</h></coordinates><panel_attributes>Gemeinschaft
--
-anzMitglieder: int
-typ: String
-adresse: Adresse
--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>8</x><y>184</y><w>184</w><h>256</h></coordinates><panel_attributes>Filter
++ changePreis(): boolean
++ preisProQm(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>730</y><w>190</w><h>160</h></coordinates><panel_attributes>Gemeinschaft
+--
+- anzMitglieder: int
+- typ: String
+- adresse: Adresse
+--
++ addMember(): boolean
++ removeMember(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>550</y><w>230</w><h>320</h></coordinates><panel_attributes>Filter
 --
 - minPreis: int
 - maxPreis: int
@@ -45,46 +57,44 @@ adresse: Adresse
 - barrierefreiheit: boolean
 -
 - equals(): boolean
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>560</y><w>120</w><h>144</h></coordinates><panel_attributes>Adresse
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>1020</y><w>150</w><h>130</h></coordinates><panel_attributes>Adresse
 --
 - straße: String
 - hausnummer: String
 - postleitzahl: int
 - stadt: String
-- land: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>784</x><y>312</y><w>128</w><h>144</h></coordinates><panel_attributes>NormalNutzer
--
+- land: String
+--
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>710</y><w>160</w><h>180</h></coordinates><panel_attributes>NormalNutzer
+--
 favoriten: Inserat[]
 
--
+--
 + inseratErstellen()
 + inseratSuchen()
 + favorisieren();
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>232</y><w>104</w><h>112</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>610</y><w>130</w><h>140</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-</panel_attributes><additional_attributes>10;10;100;10;100;120</additional_attributes></element><element><id>Relation</id><coordinates><x>248</x><y>232</y><w>80</w><h>112</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;100;10;100;120</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>610</y><w>100</w><h>140</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-</panel_attributes><additional_attributes>80;10;10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>192</y><w>368</w><h>136</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>80;10;10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>560</y><w>460</w><h>170</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-&lt;Erstellt</panel_attributes><additional_attributes>440;150;350;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>216</y><w>368</w><h>208</h></coordinates><panel_attributes>lt=-
+&lt;Erstellt</panel_attributes><additional_attributes>440;150;350;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>590</y><w>460</w><h>260</h></coordinates><panel_attributes>lt=-
 m1=M
 m2=0..n
-&lt;Favoriten</panel_attributes><additional_attributes>440;230;240;230;240;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>56</y><w>416</w><h>152</h></coordinates><panel_attributes>lt=-
-m1=N
-m2=1
-&lt;Zeigt</panel_attributes><additional_attributes>490;160;490;20;10;20;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>264</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>992</x><y>264</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>448</y><w>32</w><h>128</h></coordinates><panel_attributes>lt=-
+&lt;Favoriten</panel_attributes><additional_attributes>440;230;240;230;240;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1070</x><y>650</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1230</x><y>650</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>880</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>448</y><w>32</w><h>128</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>880</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>976</x><y>312</y><w>160</w><h>144</h></coordinates><panel_attributes>Admin
--
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1210</x><y>710</y><w>200</w><h>180</h></coordinates><panel_attributes>Admin
+--
 -adminPasswort: String
-
--
+--
 - loescheUser();
 - loescheInserat();
 - sperreUser();
@@ -93,13 +103,39 @@ m2=1
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>856</x><y>544</y><w>176</w><h>152</h></coordinates><panel_attributes>Bewertung
--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>1000</y><w>220</w><h>80</h></coordinates><panel_attributes>Bewertung
+--
 - bewertungsId: int
 - sterne: float
-
--
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>264</y><w>56</w><h>296</h></coordinates><panel_attributes>lt=-
+--
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1140</x><y>650</y><w>70</w><h>370</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-&lt;Erstellt</panel_attributes><additional_attributes>10;10;10;350</additional_attributes></element></diagram>
+&lt;Erstellt</panel_attributes><additional_attributes>10;10;10;350</additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>280</y><w>440</w><h>140</h></coordinates><panel_attributes>InseratDB
+--
++ alleInserate: ArrayList&lt;Inserat&gt;
+--
++ hinzufuegen(inserat: Inserat): boolean
++ loeschen(id: int): boolean
++ aktualisieren (hinzufuegenList: ArrayList&lt;Inserat&gt;, loeschenList: ArrayList&lt;Integer&gt;): boolean
++ suchen(id: int): Inserat
++ filtern(filter: Filter): ArrayList&lt;Inserat&gt;
++ getAll(): ArrayList&lt;Inserat&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>410</y><w>190</w><h>160</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=1
+&lt; nutzt
+</panel_attributes><additional_attributes>10;140;10;70;160;70;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>410</y><w>170</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=n
+verwaltet &gt;</panel_attributes><additional_attributes>10;10;10;70;140;70;140;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1030</x><y>120</y><w>440</w><h>140</h></coordinates><panel_attributes>UserDB
+--
++ alleUser: ArrayList&lt;User&gt;
+--
++ hinzufuegen(user: User): boolean
++ loeschen(id: int): boolean
++ aktualisieren (hinzufuegenList: ArrayList&lt;User&gt;, loeschenList: ArrayList&lt;Integer&gt;): boolean
++ suchen(id: int): User
++ getAll(): ArrayList&lt;User&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1230</x><y>250</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1
+&lt; verwaltet</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element></diagram>
