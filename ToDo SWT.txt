@@ -3,7 +3,6 @@ Sequenzdiagramm
 - erstes evtl erweitern
 - noch eins erstellen
     ->sync und async Kommunikation
-    ->ausreichend komplexer Anwendungsfall aus UseCase (evtl erweitern)
 
 Aktivitätsdiagramm
 - erweitern
@@ -11,6 +10,7 @@ Aktivitätsdiagramm
     -> 5 Kontrollknoten
     -> Unterbrechungsbereich, Exception Handler
     -> 1 "Parallelausführung"
+    -> ausreichend komplexer Anwendungsfall aus UseCase (evtl erweitern)
 
 Zustandsdiagramm
 - erweitern 
